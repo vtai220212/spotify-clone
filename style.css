@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --primary-color: #1db954;
+  --text-color: #333;
+  --white-color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player {
+  display: flex;
+  background: #121212;
+  width: 100%;
+}
+
+.player .icon-pause {
+  display: none;
+}
+
+.player.playing .icon-pause {
+  display: inline-block;
+}
+
+.player.playing .icon-play {
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #181818;
+}
+.navigation {
+  width: 20%; /* Chiếm 20% của container */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0; /* Kéo navigation đến cuối trang */
+  z-index: 999;
+}
+.menu {
+  height: 150px;
+  width: 100%;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.menu ul {
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+}
+.menu ul li {
+  padding: 10px 20px;
+  width: 100%;
+}
+.menu ul li i {
+  color: #fff;
+  font-size: 20px;
+  padding-right: 10px;
+}
+.libary {
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  font-size: 16px;
+  border-radius: 10px;
+  flex-direction: column;
+  display: flex;
+  align-items: start;
+}
+.libary .playlist-control {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+.libary .playlist i {
+  font-size: 20px;
+  padding-right: 10px;
+}
+.create-playlist {
+  width: 100%;
+  height: 400px;
+}
+.create-first,
+.create-two {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  border-radius: 10px;
+  margin: 10px;
+}
+.create-playlist-title {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.create-playlist-subtitle {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.btn-create-list {
+  width: 150px;
+  height: 40px;
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+}
+.btn-create-podcast {
+  width: 150px;
+  height: 40px;
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+}
+.btn-reg {
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 25px;
+  background: none;
+}
+.btn-login {
+  width: 150px;
+  height: 50px;
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  border-radius: 25px;
+}
+.btn-login,
+.btn-reg {
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn-login:hover,
+.btn-reg:hover {
+  transform: scale(1.1);
+  color: antiquewhite;
+}
+
+/* Content */
+.content-app {
+  width: 80%;
+  height: 100vh;
+  background-color: #121212;
+  margin: 5px;
+  border-radius: 10px;
+  z-index: 1;
+  margin-left: 20%;
+}
+
+/* Playlist */
+.playlist {
+  width: 100%;
+  background-color: #181818;
+  display: flex;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.playlist-song {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Dashborad */
+.dashboard {
+  display: flex;
+  height: 130px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 999;
+}
+.dashboard-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.dashboard-content header {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.dashboard-content header h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.cd {
+  display: flex;
+  width: 60px;
+  margin: 0 20px;
+}
+
+.cd-thumb {
+  width: 100%;
+  padding-top: 100%;
+  background-color: #333;
+  background-size: cover;
+  margin: auto;
+}
+.dashboard-content header .thumb-current {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 8px;
+}
+
+.option-dashboard {
+  width: 20%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: auto;
+}
+.option-dashboard .btn {
+  color: #fff;
+  padding: 0 18px;
+  font-size: 17px;
+}
+/* CONTROL */
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control .btn {
+  color: #ffffff;
+  padding: 0 18px;
+  font-size: 20px;
+}
+
+.control .btn.active {
+  color: var(--primary-color);
+}
+
+.control .btn-toggle-play {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color);
+}
+
+.song-control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.progress {
+  width: 60%;
+  -webkit-appearance: none;
+  height: 6px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.song {
+  width: calc(20% - 20px);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #242424;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.song.active {
+  background-color: var(--primary-color);
+}
+
+.song:active {
+  opacity: 0.8;
+}
+
+.song.active .option,
+.song.active .author,
+.song.active .title {
+  color: #ffffff;
+}
+
+.song .thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 8px;
+}
+
+.song .body {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.song .title {
+  font-size: 18px;
+  color: var(--white-color);
+  text-overflow: ellipsis;
+}
+
+.song .author {
+  font-size: 14px;
+  color: #ffffff;
+}
